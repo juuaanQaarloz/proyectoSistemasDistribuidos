@@ -26,11 +26,13 @@
         autorCtrl.tblAutor = tblsServicios.getTabla('tblsGenerales', 'tblAutor');
         autorCtrl.listDatosAutores = [];
         autorCtrl.listDatosAutoresTbl = false;
+        autorCtrl.nuevoAutor = {};
 
         activarControlador();
         autorCtrl.seleccionarAutor = seleccionarAutor;
         autorCtrl.insertarAutor = insertarAutor;
         autorCtrl.editarAutor = editarAutor;
+        autorCtrl.eliminarAutor = eliminarAutor;
 
 
         function activarControlador() {
@@ -42,7 +44,8 @@
 
         function consultarAutores() {
             autorCtrl.listDatosAutores = [];
-            var mapa = {};
+            autorCtrl.autorSeleccionado = null;
+            var mapa = { };
             var promesa = serviciosRest.consultaGenerica('consultaActor', mapa);
             promesa.then(function (response) {
                 var respuesta = JSON.parse(response.data+"}");
@@ -57,14 +60,63 @@
 
         function seleccionarAutor(row) {
             autorCtrl.autorSeleccionado = row;
+            autorCtrl.autorEditable = angular.copy(autorCtrl.autorSeleccionado);
         }
 
         function insertarAutor() {
-            angular.element("#mdlConfirmaCerrarSesion").modal('hide');
+            var mapa = {
+                accion: 'INSERT',
+                nombre: autorCtrl.nuevoAutor.nombre,
+                nacionalidad: autorCtrl.nuevoAutor.nacionalidad,
+            };
+            var promesa = serviciosRest.crud('crudAutor', mapa);
+            promesa.then(function (response) {
+                console.log(response);
+                if(response && response.data) {
+                    //var respuesta = JSON.parse(response.data); //JSON CON EL ID INSERTADO
+                    autorCtrl.nuevoAutor = {};
+                    angular.element("#mdlAutorA").modal('hide');
+                    consultarAutores();
+                }
+            });
+            promesa.catch(function (error) {
+                alertasServicios.desplegarMensaje(error);
+            });
         }
 
         function editarAutor() {
-            angular.element("#mdlConfirmaCerrarSesion").modal('hide');
+            var mapa = {
+                accion: 'UPDATE',
+                id: autorCtrl.autorSeleccionado.id,
+                nombre: autorCtrl.autorEditable.nombre,
+                nacionalidad: autorCtrl.autorEditable.nacionalidad,
+            };
+            var promesa = serviciosRest.crud('crudAutor', mapa);
+            promesa.then(function (response) {
+                console.log(response);
+                console.log(response);
+                console.log(response);
+                angular.element("#mdlAutorM").modal('hide');
+                consultarAutores();
+            });
+            promesa.catch(function (error) {
+                alertasServicios.desplegarMensaje(error);
+            });
+        }
+
+        function eliminarAutor() {
+            var mapa = {
+                accion: 'DELETE',
+                id: autorCtrl.autorSeleccionado.id
+            };
+            var promesa = serviciosRest.crud('crudAutor', mapa);
+            promesa.then(function (response) {
+                angular.element("#mdlAutorB").modal('hide');
+                consultarAutores();
+            });
+            promesa.catch(function (error) {
+                alertasServicios.desplegarMensaje(error);
+            });
         }
 
     }

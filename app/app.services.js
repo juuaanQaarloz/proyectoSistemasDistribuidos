@@ -19,7 +19,8 @@
         var servicios = {
             validarDato: validarDato,
             replaceAll: replaceAll,
-            consultaGenerica: consultaGenerica
+            consultaGenerica: consultaGenerica,
+            crud: crud,
         };
         return servicios;
 
@@ -37,6 +38,9 @@
 
         function consultaGenerica(services) {
             return $http.get("ApiPHP/" + services + ".php");
+        }
+        function crud(services, parametros) {
+            return $http.post("ApiPHP/" + services + ".php", parametros);
         }
     }
 })();

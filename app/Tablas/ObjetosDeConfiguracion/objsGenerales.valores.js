@@ -19,5 +19,17 @@
                 {valor: 'nacionalidad', tipo: 'string', descripcion: 'Nacionalidad'},
             ]
         })
+
+        .value('tblCinema', {
+            id: 'idTablaCinema',
+            paginacion: [10, 30, 50, 100],
+            permisos: {agregar: true, borrar: true, modificar: true, consultar: true},
+            modals: {agregar: 'mdlCinemaA', borrar: 'mdlCinemaB', modificar: 'mdlCinemaM'},
+            columnas: [
+                {valor: 'id', tipo: 'string', descripcion: 'No.'},
+                {valor: 'nombre', tipo: 'string', descripcion: 'Nombre'},
+                {valor: 'direccion', tipo: 'string', descripcion: 'Dirección'},
+            ]
+        })
     ;
 })();
