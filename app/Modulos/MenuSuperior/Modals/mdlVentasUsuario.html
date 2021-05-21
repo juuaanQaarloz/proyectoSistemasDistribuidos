@@ -1,0 +1,117 @@
+<div class="modal fade" id="mdlVentasUsuario" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" style="width: 70%">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">
+                    Mis Compras
+                </h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-inline" role="form" name="form" novalidate>
+
+                    <div class="row">
+                        <div class="col-sm-12" >
+                            <xs-tabla icono="dinero" titulo="Mis Compras"
+                                      config="menuSuperiorCtrl.tblMisProductoVenta"
+                                      datos="menuSuperiorCtrl.misVentas"
+                                      registro-seleccionado="menuSuperiorCtrl.productoVentaSeleccionado"
+                                      seleccionar-registro="menuSuperiorCtrl.seleccionarProductoVenta(registro)"
+                                      detalle-interno="true">
+                                <div class="row" style="padding: 1% 2%">
+                                    <div class="col-sm-12">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <b>Direccion de Entrega</b>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <label><b>País</b></label>
+                                                <div>
+                                                    {{menuSuperiorCtrl.productoVentaSeleccionado.pais}}
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <label><b>Estado</b></label>
+                                                <div>
+                                                    {{menuSuperiorCtrl.productoVentaSeleccionado.estado}}
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <label><b>Municipio</b></label>
+                                                <div>
+                                                    {{menuSuperiorCtrl.productoVentaSeleccionado.municipio}}
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <label><b>Ciudad</b></label>
+                                                <div>
+                                                    {{menuSuperiorCtrl.productoVentaSeleccionado.ciudad}}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <label><b>Calle</b></label>
+                                                <div>
+                                                    {{menuSuperiorCtrl.productoVentaSeleccionado.calle}}
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <label><b>No Exterior</b></label>
+                                                <div>
+                                                    {{menuSuperiorCtrl.productoVentaSeleccionado.noExt}}
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <label><b>No Interior</b></label>
+                                                <div>
+                                                    {{menuSuperiorCtrl.productoVentaSeleccionado.noInt}}
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <label><b>Colonia</b></label>
+                                                <div>
+                                                    {{menuSuperiorCtrl.productoVentaSeleccionado.colonia}}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-sm-4">
+                                                <label><b>Codigo Postal</b></label>
+                                                <div>
+                                                    {{menuSuperiorCtrl.productoVentaSeleccionado.codPos}}
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <label><b>Referencias</b></label>
+                                                <div>
+                                                    {{menuSuperiorCtrl.productoVentaSeleccionado.referencia}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </xs-tabla>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="col-sm-3 pull-right" style="margin-bottom: 20px">
+                            <div style="font-size: 15px;">
+                                <button class="buttonAceptar" data-dismiss="modal" aria-hidden="true">
+                                    <span>{{"CERRAR"}}</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

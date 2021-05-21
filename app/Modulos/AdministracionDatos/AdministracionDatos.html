@@ -1,0 +1,43 @@
+<div class="row" style="padding: 2% 10%">
+
+    <div class="col-sm-12" ng-if="administracionDatosCtrl.mostrarSecciones" style="margin-bottom: 80px">
+        <!-- TABS -->
+        <div class="table tabs-below" style="margin-top: 15px">
+            <ul class="nav nav-tabs">
+                <li ng-class="{active: administracionDatosCtrl.tabSeleccionada == 1}">
+                    <a href="" ng-click="administracionDatosCtrl.tabSeleccionada = 1">
+                        Usuarios
+                    </a>
+                </li>
+                <li ng-class="{active: administracionDatosCtrl.tabSeleccionada == 2}">
+                    <a href="" ng-click="administracionDatosCtrl.tabSeleccionada = 2">
+                        Categorias
+                    </a>
+                </li>
+                <li ng-class="{active: administracionDatosCtrl.tabSeleccionada == 3}">
+                    <a href="" ng-click="administracionDatosCtrl.tabSeleccionada = 3">
+                        Promociones
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+
+        <div class="tab-content" ng-if="administracionDatosCtrl.tabSeleccionada == 1"
+             style="margin-top: 15px">
+            <div ng-include="'Modulos/AdministracionDatos/Usuario/usuario.html'"></div>
+        </div>
+
+        <div class="tab-content" ng-if="administracionDatosCtrl.tabSeleccionada == 2"
+             style="margin-top: 15px">
+            <div ng-include="'Modulos/AdministracionDatos/Categoria/Categoria.html'"></div>
+        </div>
+
+        <div class="tab-content" ng-if="administracionDatosCtrl.tabSeleccionada == 3"
+             style="margin-top: 15px">
+            <div ng-include="'Modulos/AdministracionDatos/Promocion/Promocion.html'"></div>
+        </div>
+    </div>
+
+</div>

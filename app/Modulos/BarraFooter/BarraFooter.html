@@ -1,0 +1,92 @@
+<div ng-controller="BarraFooter as barraFooterCtrl">
+
+    <div class="row" style="margin-top: 2%;">
+        <div class="col-sm-12 cuadro-texto-footer" >
+            <div class="col-sm-12"
+                 style="text-align: right; padding: 5% 2% 3% 0 ">
+                <div class="col-sm-9">&nbsp;&nbsp;&nbsp;</div>
+                <div class="col-md-3">
+                    <a target="_blank"
+                       href="https://www.facebook.com/JuuaanQaarlos/">
+                        <img src="img/redesSociales/facebook.png">
+                    </a>&nbsp;&nbsp;&nbsp;
+                    <a target="_blank"
+                       href="https://twitter.com/">
+                        <img src="img/redesSociales/twitter.png">
+                    </a>&nbsp;&nbsp;&nbsp;
+                    <a target="_blank"
+                       href="https://www.youtube.com/">
+                        <img src="img/redesSociales/youtube.png">
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-3 col-sm-offset-2">
+                <div class="col-sm-12">
+                    <b class="texto-politicas-titulo">Acerca de Nosotros</b>
+                </div>
+                <div class="col-sm-12 caja-texto-footer texto-politicas"
+                     ng-click="barraFooterCtrl.activar(0);">
+                    Quienes Somos
+                </div>
+                <div class="col-sm-12 caja-texto-footer texto-politicas"
+                     ng-click="barraFooterCtrl.activar(1);">
+                    Oficinas | Tiendas
+                </div>
+            </div>
+            <div class="col-sm-3" >
+                <div class="col-sm-12">
+                    <b class="texto-politicas-titulo">Ayuda al Cliente</b>
+                </div>
+                <div class="col-sm-12 caja-texto-footer texto-politicas"
+                     ng-click="barraFooterCtrl.activar(2);">
+                    Guia de Compras
+                </div>
+                <div class="col-sm-12 caja-texto-footer texto-politicas"
+                     ng-click="barraFooterCtrl.activar(3);">
+                    Pago
+                </div>
+                <div class="col-sm-12 caja-texto-footer texto-politicas"
+                     ng-click="barraFooterCtrl.activar(4);">
+                    Envio
+                </div>
+                <div class="col-sm-12 caja-texto-footer texto-politicas"
+                     ng-click="barraFooterCtrl.activar(5);">
+                    Cambios
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="col-sm-12 caja-texto-footer">
+                    <b class="texto-politicas-titulo">Politicas</b>
+                </div>
+                <div class="col-sm-12 caja-texto-footer texto-politicas"
+                     ng-click="barraFooterCtrl.activar(6);">
+                    Politica de Privacidad
+                </div>
+                <div class="col-sm-12 caja-texto-footer texto-politicas"
+                     ng-click="barraFooterCtrl.activar(7);">
+                    Politica Cookies
+                </div>
+                <div class="col-sm-12 caja-texto-footer texto-politicas"
+                     ng-click="barraFooterCtrl.activar(8);">
+                    Aviso Copyright
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="footer-login-simple">
+                <div style="color: white; width: 100%; text-align: center; padding-top: 7px;">
+                    <div>
+                        Exclusividad de Distribución JC 2021
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div ng-include="'Modulos/BarraFooter/Modals/mdlPoliticas.html'"></div>
+
+</div>
+
+

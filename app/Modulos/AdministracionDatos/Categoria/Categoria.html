@@ -1,0 +1,41 @@
+<div class="row" style="padding: 1%" ng-controller="Categoria as categoriaCtrl">
+
+    <div class="col-sm-12" >
+        <xs-tabla icono="personas" titulo="Categorias"
+                  config="categoriaCtrl.tblCategorias"
+                  datos="categoriaCtrl.categorias"
+                  registro-seleccionado="categoriaCtrl.categoriaSeleccionado"
+                  seleccionar-registro="categoriaCtrl.seleccionarCategoria(registro)"
+                  detalle-interno="true">
+            <div class="row">
+                <div class="col-sm-12">
+                    <ng-gallery ver-detalle="'true'" images="categoriaCtrl.imagenRow"></ng-gallery>
+                </div>
+            </div>
+            <div class="row" style="padding: 2%">
+                <div class="col-sm-12" >
+                    <xs-tabla icono="personas" titulo="Productos"
+                              config="categoriaCtrl.tblCategoriaProducto"
+                              datos="categoriaCtrl.productos"
+                              registro-seleccionado="categoriaCtrl.catProductoSeleccionado"
+                              seleccionar-registro="categoriaCtrl.seleccionarProducto(registro)"
+                              detalle-interno="true">
+                        <div class="col-sm-12">
+                            <ng-gallery ver-detalle="'true'" images="categoriaCtrl.imagenRowP"></ng-gallery>
+                        </div>
+                    </xs-tabla>
+                </div>
+            </div>
+        </xs-tabla>
+    </div>
+
+    <div ng-include="'Modulos/AdministracionDatos/Categoria/modals/categoriaA.html'"></div>
+    <div ng-include="'Modulos/AdministracionDatos/Categoria/modals/categoriaB.html'"></div>
+    <div ng-include="'Modulos/AdministracionDatos/Categoria/modals/categoriaM.html'"></div>
+
+    <div ng-include="'Modulos/AdministracionDatos/Categoria/modals/productoA.html'"></div>
+    <div ng-include="'Modulos/AdministracionDatos/Categoria/modals/productoB.html'"></div>
+    <div ng-include="'Modulos/AdministracionDatos/Categoria/modals/productoM.html'"></div>
+
+
+</div>

@@ -1,0 +1,192 @@
+<div class="modal fade" id="mdlSoloResgistro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog"  style="width: 85%">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">
+                    <b>REGISTRARME</b>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-inline" role="form" name="form" novalidate>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label>Nombre de Usuario</label>
+                            <div ng-class="{'has-error': form.nombre.$invalid, 'has-success': form.nombre.$valid}">
+                                <input type="text" name="nombre"
+                                       ng-model="menuSuperiorCtrl.nuevoUsr.nombre"
+                                       ng-pattern="/^[A-Za-záéíóúÁÉÍÓÚñÑ0-9- ]*$/"
+                                       class="form-control" style="width: 100%"
+                                       maxlength="100" required/>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-3">
+                            <label>Contraseña</label>
+                            <div ng-class="{'has-error': form.clave.$invalid, 'has-success': form.clave.$valid}">
+                                <input type="password" name="clave"  style="width: 100%"
+                                       ng-model="menuSuperiorCtrl.nuevoUsr.clave"
+                                       ng-pattern="/^[A-Za-z0-9- ]*$/"
+                                       class="form-control" maxlength="18" required/>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <label>Correo Electrònico</label>
+
+                            <div ng-class="{'has-error': form.correo.$invalid, 'has-success': form.correo.$valid}">
+                                <input type="email" name="correo"  style="width: 100%"
+                                       ng-model="menuSuperiorCtrl.nuevoUsr.eMail"
+                                       class="form-control" maxlength="100" required
+                                       pattern="[a-zñÑ0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}$"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <label>Tipo de Usuario</label>
+                            <select class="form-control" name="tipoUsuario"
+                                    ng-required="true" style="width: 100%"
+                                    xs-validate-text-kendo-combo-box kendo-combo-box
+                                    k-options="menuSuperiorCtrl.cbxTipoUsuario"
+                                    k-data-source="menuSuperiorCtrl.tiposdeUsuario"
+                                    ng-model="menuSuperiorCtrl.nuevoUsr.tipoUsuario"
+                                    k-ng-model="menuSuperiorCtrl.tipoUsuario"
+                                    ng-class="{'error-combo': form.tipoUsuario.$invalid,
+                                               'success-combo': form.tipoUsuario.$valid}">
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                            Direccion del Usuario
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label>País</label>
+                            <div ng-class="{'has-error': form.pais.$invalid, 'has-success': form.pais.$valid}">
+                                <input type="text" name="pais"
+                                       ng-model="menuSuperiorCtrl.nuevoUsr.pais"
+                                       ng-pattern="/^[A-Za-záéíóúÁÉÍÓÚñÑ0-9- ]*$/"
+                                       class="form-control" style="width: 100%"
+                                       maxlength="100" required/>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <label>Estado</label>
+                            <div ng-class="{'has-error': form.estado.$invalid, 'has-success': form.estado.$valid}">
+                                <input type="text" name="estado"
+                                       ng-model="menuSuperiorCtrl.nuevoUsr.estado"
+                                       ng-pattern="/^[A-Za-záéíóúÁÉÍÓÚñÑ0-9- ]*$/"
+                                       class="form-control" style="width: 100%"
+                                       maxlength="100" required/>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <label>Municipio</label>
+                            <div ng-class="{'has-error': form.municipio.$invalid, 'has-success': form.municipio.$valid}">
+                                <input type="text" name="municipio"
+                                       ng-model="menuSuperiorCtrl.nuevoUsr.municipio"
+                                       ng-pattern="/^[A-Za-záéíóúÁÉÍÓÚñÑ0-9- ]*$/"
+                                       class="form-control" style="width: 100%"
+                                       maxlength="100" required/>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <label>Ciudad</label>
+                            <div ng-class="{'has-error': form.ciudad.$invalid, 'has-success': form.ciudad.$valid}">
+                                <input type="text" name="ciudad"
+                                       ng-model="menuSuperiorCtrl.nuevoUsr.ciudad"
+                                       ng-pattern="/^[A-Za-záéíóúÁÉÍÓÚñÑ0-9- ]*$/"
+                                       class="form-control" style="width: 100%"
+                                       maxlength="100" required/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label>Calle</label>
+                            <div ng-class="{'has-error': form.calle.$invalid, 'has-success': form.calle.$valid}">
+                                <input type="text" name="calle"
+                                       ng-model="menuSuperiorCtrl.nuevoUsr.calle"
+                                       ng-pattern="/^[A-Za-záéíóúÁÉÍÓÚñÑ0-9- ]*$/"
+                                       class="form-control" style="width: 100%"
+                                       maxlength="100" required/>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <label>No Exterior</label>
+                            <div ng-class="{'has-error': form.noExterior.$invalid, 'has-success': form.noExterior.$valid}">
+                                <input type="text" name="noExterior"
+                                       ng-model="menuSuperiorCtrl.nuevoUsr.noExterior"
+                                       class="form-control" style="width: 100%"
+                                       maxlength="100" required/>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <label>No Interior</label>
+                            <div ng-class="{'has-error': form.noInterior.$invalid, 'has-success': form.noInterior.$valid}">
+                                <input type="text" name="noInterior"
+                                       ng-model="menuSuperiorCtrl.nuevoUsr.noInterior"
+                                       class="form-control" style="width: 100%"
+                                       maxlength="100"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <label>Colonia</label>
+                            <div ng-class="{'has-error': form.colonia.$invalid, 'has-success': form.colonia.$valid}">
+                                <input type="text" name="colonia"
+                                       ng-model="menuSuperiorCtrl.nuevoUsr.colonia"
+                                       ng-pattern="/^[A-Za-záéíóúÁÉÍÓÚñÑ0-9- ]*$/"
+                                       class="form-control" style="width: 100%"
+                                       maxlength="100" required/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-sm-4">
+                            <label>Codigo Postal</label>
+                            <div ng-class="{'has-error': form.codigoPostal.$invalid, 'has-success': form.codigoPostal.$valid}">
+                                <input type="text" name="codigoPostal"
+                                       ng-model="menuSuperiorCtrl.nuevoUsr.codigoPostal"
+                                       class="form-control" style="width: 100%"
+                                       maxlength="5" required/>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <label>Referencias</label>
+                            <div ng-class="{'has-error': form.referencias.$invalid, 'has-success': form.referencias.$valid}">
+                                <input type="text" name="referencias"
+                                       ng-model="menuSuperiorCtrl.nuevoUsr.referencias"
+                                       ng-pattern="/^[A-Za-záéíóúÁÉÍÓÚñÑ0-9- ]*$/"
+                                       class="form-control" style="width: 100%"
+                                       maxlength="100" required/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer" ng-if="form.$valid">
+                        <div style="display: inline-block; margin-left: 15px;">
+                            <div style="display: inline-block;">
+                                <label>{{'Confirmar'}}</label>
+                            </div>
+                            <div style="display: inline-block; margin-left: 5px;">
+                                <button type="button"
+                                        ng-click="menuSuperiorCtrl.agregarUsuario()"
+                                        data-dismiss="modal"
+                                        class="btn btn-success">
+                                    <i class="ixs ixs-palomita">
+                                    </i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

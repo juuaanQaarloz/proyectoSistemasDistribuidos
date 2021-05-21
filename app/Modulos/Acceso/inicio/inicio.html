@@ -1,0 +1,141 @@
+<div ng-controller="InicioControlador as inicioCtrl">
+
+    <div class="row" style="padding: 0 15%">
+        <div class="col-sm-12 text-center wrapper" style="margin-top: 40px">
+            <p class="slogan"><span class="span-titulos">PROMOCIONES</span></p>
+        </div>
+        <div class="col-sm-12" style="margin-top: 45px" ng-if="inicioCtrl.promocionesActivas.length > 0">
+            <div class="col-sm-12" style="padding: 0"
+                 ng-if="inicioCtrl.viewCarrucel">
+                <ui-carousel slides="inicioCtrl.promocionesActivas"
+                             slides-to-show="1"
+                             initial-slide="1"
+                             autoplay="true"
+                             autoplay-speed="2000"
+                             on-click-imagen="inicioCtrl.irAComprarProducto(item);"
+                             buttons-slide="true">
+                    <carousel-item>
+                        <div class="image">
+                            <img src="{{  item.urlImagen }}"
+                                 style="width: 100%; height: 500px">
+                        </div>
+                    </carousel-item>
+                </ui-carousel>
+            </div>
+        </div>
+        <div class="col-sm-12" style="margin-top: 50px" ng-if="inicioCtrl.categorias.length > 0">
+            <div class="col-sm-12 text-center wrapper">
+                <p class="slogan"><span class="span-titulos">DEPARTAMENTOS</span></p>
+            </div>
+            <div class="col-sm-12" style="margin-top: 25px"  ng-if="inicioCtrl.categorias.length > 3">
+                <ui-carousel slides="inicioCtrl.categorias"
+                             slides-to-show="3"
+                             autoplay="true"
+                             autoplay-speed="5000"
+                             dots="true"
+                             visible-next="true"
+                             inicio-ctrl="inicioCtrl"
+                             visible-prev="true">
+                    <carousel-item>
+
+                        <div style="height: 320px; padding: 5%">
+                            <div>
+                                <img src="{{item.urlImagen}}"
+                                     style="width: 100%; height: 200px"
+                                     ng-click="inicioCtrl.irADetalleProductoCat(item)">
+                            </div>
+                            <div class="card-categoria">
+                                <div class="card-categoria-titulo">
+                                    {{ item.nombreCategoria }}
+                                </div>
+                                <div class="card-categoria-sub-titulo">
+                                    <span ng-if="item.descripcion.length > 55">{{ item.descripcion | limitTo: 48 }}...</span>
+                                    <span ng-if="item.descripcion.length <= 55">{{ item.descripcion }}</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </carousel-item>
+                </ui-carousel>
+            </div>
+            <div class="col-sm-12 text-center"
+                 style="margin-top: 25px"
+                 ng-if="inicioCtrl.categorias.length <= 3">
+                <div class="col-sm-4"
+                     ng-class="{'col-sm-offset-4': inicioCtrl.categorias.length == 1,
+                                'col-sm-offset-1': inicioCtrl.categorias.length == 2}"
+                     style="height: 320px; cursor: pointer"
+                     ng-repeat="item in inicioCtrl.categorias"
+                     ng-click="inicioCtrl.irADetalleProductoCat(item)">
+                    <div>
+                        <img src="{{item.urlImagen}}"
+                             style="width: 100%; height: 200px">
+                    </div>
+                    <div class="card-categoria">
+                        <div class="card-categoria-titulo">
+                            <b>{{ item.nombreCategoria }}</b>
+                        </div>
+                        <div class="card-categoria-sub-titulo"
+                             style="margin-top: 5px; font-size: 17px">
+                            {{ item.descripcion }}
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm-12" style="margin-top: 50px">
+
+            <div class="col-sm-12 text-center wrapper">
+                <p class="slogan"><span class="span-titulos">NOVEDADES</span></p>
+            </div>
+
+            <div class="col-sm-12">
+                <div class="col-sm-3" style="margin: 15px 0;"
+                     ng-repeat="loMasVendido in inicioCtrl.productosActivos">
+                    <div style="height: 210px; padding: 5%">
+                        <div style="background: black">
+                            <div class="card-categoria-titulo" style="text-align: center; color: white !important;">
+                              <b> {{loMasVendido.nombreProducto}} </b>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="{{loMasVendido.urlImagen}}" style="width: 100%; height: 130px">
+                        </div>
+                        <div class="card-lomas-vendido">
+                            <div class="card-categoria-sub-titulo" style="font-size: 15px">
+                                <span ng-if="loMasVendido.descripcion.length > 40">{{ loMasVendido.descripcion | limitTo: 40 }}...</span>
+                                <span ng-if="loMasVendido.descripcion.length <= 40">{{ loMasVendido.descripcion }}</span>
+                            </div>
+                            <div class="card-categoria-sub-titulo" style="font-size: 15px; text-align: right">
+                                <b>${{loMasVendido.precio | number}}</b>
+                            </div>
+                            <div style="margin-top: 10px">
+                                <div class="col-sm-12"  style="padding: 0">
+                                    <button class="buttonIgnorar"
+                                            ng-click="inicioCtrl.irADetalleProducto(loMasVendido)">
+                                        <span>{{"DETALLE"}}</span>
+                                    </button>
+                                </div>
+                                <div class="col-sm-12" style="padding: 0; margin-top: 10px">
+                                    <button class="buttonAceptar"
+                                            ng-click="inicioCtrl.irADetalleVenta(loMasVendido)">
+                                        <span>{{"COMPRAR"}}</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+

@@ -1,0 +1,65 @@
+<style>
+    .error-file {
+        border: none !important;
+    }
+
+    .error-file label {
+        border: 1px solid #d9514e !important;
+        display: inline-block;
+        padding: 3px 12px;
+        cursor: pointer;
+    }
+    .error-file input {
+        display: none !important;
+    }
+
+    .success-file {
+        border: none !important;
+    }
+
+    .success-file label {
+        border: 1px solid #69b869 !important;
+        display: inline-block;
+        padding: 3px 12px;
+        cursor: pointer;
+    }
+    .success-file input {
+        display: none !important;
+    }
+
+</style>
+
+<div ng-if="!nombreArchivoEditable">
+    <div class="success-file">
+        <label for="agregar-documento{{fileCtrl.idFile}}"
+               tooltip title="{{fileCtrl.file.name}}" data-placement="top">
+            <span ng-if="!etiquetaAchivo">Seleccionar Archivo</span>
+        </label> &nbsp;&nbsp;
+        {{fileCtrl.file.name}}
+        <input type="file" id="agregar-documento{{fileCtrl.idFile}}"
+               ecommers-file-agregar-model
+               ng-model="fileCtrl.file"
+               ng-change="fileCtrl.actualizar()"
+               ng-required="requerido"
+               name="archivo{{fileCtrl.idFile}}"
+               accept={{acepta}}/>
+        &nbsp;&nbsp;
+        <span class="clickable" style="color:red;" ng-if="fileCtrl.file && elimina" ng-click="fileCtrl.limpiar()" tooltip title="Eliminar Archivo" data-placement="top"> <i class="ixs ixs-tacha"></i> </span>
+    </div>
+</div>
+<div ng-if="nombreArchivoEditable">
+    <div class="success-file">
+        <label for="editar-documento{{fileCtrl.idFile}}"
+               tooltip title="{{fileCtrl.file.name}}" data-placement="top">
+            Seleccionar Archivo
+        </label>&nbsp;&nbsp;
+       {{fileCtrl.file.name?fileCtrl.file.name:nombreArchivoEditable}}
+        <input type="file" id="editar-documento{{fileCtrl.idFile}}"
+               ecommers-file-agregar-model
+               ng-model="fileCtrl.file"
+               ng-change="fileCtrl.actualizar()"
+               ng-required="requerido && fileCtrl.file.name == nombreArchivoEditable"
+               name="archivoEditar{{fileCtrl.idFile}}"
+               accept={{acepta}}/>
+    </div>
+</div>

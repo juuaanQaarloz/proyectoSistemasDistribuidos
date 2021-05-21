@@ -1,0 +1,298 @@
+<div class="modal fade" id="mdlPoliticas" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" style="width: 60%">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel" style="text-align: center">
+                    <b ng-if="barraFooterCtrl.politica == 0">Quienes Somos</b>
+                    <b ng-if="barraFooterCtrl.politica == 1">Oficinas | Tiendas</b>
+                    <b ng-if="barraFooterCtrl.politica == 2">Guia de Compras</b>
+                    <b ng-if="barraFooterCtrl.politica == 3">Pago</b>
+                    <b ng-if="barraFooterCtrl.politica == 4">Envio</b>
+                    <b ng-if="barraFooterCtrl.politica == 5">Cambios</b>
+                    <b ng-if="barraFooterCtrl.politica == 6">Politica de Privacidad</b>
+                    <b ng-if="barraFooterCtrl.politica == 7"> Politica Cookies</b>
+                    <b ng-if="barraFooterCtrl.politica == 8"> Aviso Copyright</b>
+                </h4>
+            </div>
+            <div class="modal-body" style="text-justify: auto">
+                <form class="form-inline" role="form" name="form" novalidate>
+
+                    <div class="row" ng-if="barraFooterCtrl.politica == 0">
+                        <div class="col-sm-12">
+                            <div class="titulo-politicas"><b>Sobre Nosotros</b></div>
+                            <div>JC es una plataforma nacional de comercio online tipo B2C (negocio a consumidor).
+                                 La empresa está principalmente enfocada a la ropa, relojes y perfumes,
+                                 La marca fue creada en DICIEEMBRE de 2020.</div>
+                            <div class="titulo-politicas"><b>Nuestra Misión</b></div>
+                            <div>JC ofrece las últimas tendencias, a unos precios más que atractivos.
+                                 JC es capaz de llevar las últimas tendencias basadas en la moda global y llevar esos estilos al mercado.
+                                 El objetivo es ofrecer productos de calidad con estilo, a precios atractivos para todos los usuarios.</div>
+                        </div>
+                    </div>
+
+                    <div class="row" ng-if="barraFooterCtrl.politica == 1">
+                        <div class="col-sm-12">
+                            <div class="titulo-politicas"><b>Oficinas Matriz</b></div>
+                            <div>Rafael Chazarro, 121. Toluca Estado de México</div>
+                            <br>
+                            <br>
+                            <div class="titulo-politicas"><b>Oficinas Zinacantepec</b></div>
+                            <div>Adolfo Ruiz Cortinez 99. Zinacantepec Estado de México</div>
+                        </div>
+                    </div>
+
+                    <div class="row" ng-if="barraFooterCtrl.politica == 2">
+                        <div class="col-sm-12">
+                            <div class="titulo-politicas"><b>Comprar en JC en muy sencillo</b></div>
+                            <br>
+                            <div class="titulo-politicas"><b>Paso 1</b></div>
+                            <div>Añada algún/algunos artículos a su Cesta. <br>
+                                Seleccione la talla, el color o la cantidad si es necesario. Para algunos artículos, solemos recomendarle la talla. Simplemente haga click en Comprueba mi talla;<br>
+                                </div>
+                            <br>
+                            <div class="titulo-politicas"><b>Paso 2</b></div>
+                            <div>Comprobar una vez que la selección se haya completado. <br>
+                                Haga click en el botón REVISAR CESTA para revisar el/los artículo/s seleccionados y haga las modificaciones que crea necesarias.<br>
+                                Haga click en “SALIR DE FORMA SEGURA AHORA” si el pedido está listo. De lo contrario, haga click en “SEGUIR COMPRANDO”.
+                            </div>
+                            <br>
+                            <div class="titulo-politicas"><b>Paso 3</b></div>
+                            <div>Entre en su cuenta JC. <br>
+                                Seleccione Entrar si usted tiene ya una cuenta creada en nuestra página; <br>
+                                Si no es así, elija la opción Nueva/o en JC para registrarse con su cuenta de correo electrónico.
+                            </div>
+                            <br>
+                            <div class="titulo-politicas"><b>Paso 4</b></div>
+                            <div>Información completa de envío y facturación. <br>
+                                Rellene la dirección de envío;<br>
+                                Seleccione un método de pago;<br>
+                                Elija una opción de envío;<br>
+                                Aplique un cupón * y puntos *;<br>
+                                Haga click en “HACER PEDIDO”.<br>
+                                * significa “Si dispone de ellos”. Ver más información sobre los Cupones y los Bonus Point aquí .
+                            </div>
+                            <br>
+                            <div class="titulo-politicas"><b>Paso 5</b></div>
+                            <div>
+                                Rellene la información de pago y luego haga click en el botón CONTINUAR para completar la compra.
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row" ng-if="barraFooterCtrl.politica == 3">
+                        <div class="col-sm-12">
+                            <div class="titulo-politicas"><b>¿QUÉ FORMA DE PAGO PUEDO UTILIZAR PARA REALIZAR MI COMPRA?</b></div>
+                            <div>
+                                El pago tiene que realizarse online para poder finalizar un pedido, no es posible pagar en tienda al recibirlo. No obstante, tienes la posibilidad de probarte los artículos en tienda al recoger tu pedido y devolver o cambiar aquellos con los que no estés satisfecho.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" ng-if="barraFooterCtrl.politica == 4">
+                        <div class="col-sm-12">
+                            <div class="titulo-politicas"><b>¿QUÉ FORMA DE PAGO PUEDO UTILIZAR PARA REALIZAR MI COMPRA?</b></div>
+                            <div>
+                                <b class="titulo-politicas">¿DÓNDE PUEDO RECIBIR MI PEDIDO?</b>
+                                <br>
+                                Puedes recibirlo en la dirección que elijas (domicilio, trabajo... pero nunca en apartado de correos ni hoteles) o bien en la tienda JC que desees.
+                                <br>
+                                <br>
+                                <b class="titulo-politicas">¿EL PAÍS DE ENTREGA PUEDE SER DIFERENTE AL DE COMPRA?</b>
+                                <br>
+                                No, el país de entrega siempre tiene que coincidir con el país de compra.
+                                <br>
+                                <br>
+                                <b class="titulo-politicas">¿CUÁNTO TARDARÁ EN LLEGAR MI PEDIDO?</b>
+                                <br>
+                                Standard: 2 a 4 días (*Excepto zonas remotas)
+                                <br>
+                                Recogida en Tienda: 3 a 5 días (*Excepto zonas remotas)
+                                <br>
+                                Exprés Domicilio: 1-2 días laborales (*Excepto zonas remotas)
+                                <br>
+                                <br>
+                                <b class="titulo-politicas">¿CUÁNTO HE DE PAGAR DE GASTOS DE ENVÍO?</b>
+                                <br>
+                                Standard: MXN 55.00
+                                <br>
+                                Recogida en Tienda: GRATIS
+                                <br>
+                                Exprés Domicilio: MXN 95.00
+                                <br>
+                                <br>
+                                <b class="titulo-politicas"> ¿PUEDO SEGUIR EL ESTADO DE MI PEDIDO?</b>
+                                <br>
+                                Sí, a través de "TU CUENTA", entra en pedidos realizados y podrás ver el estado de tu pedido.
+                                <br>
+                                <br>
+                                <b class="titulo-politicas">¿CUÁL ES EL PROCESO DE LA ENTREGA EN DOMICILIO?</b>
+                                <br>
+                                Si has elegido entrega en domicilio, te enviaremos un e-mail de confirmación de envío (cuando tu pedido vaya a salir del almacén), otro con un número de seguimiento (con link a la página web de la empresa de mensajería) y, por último, el transportista se pondrá en contacto contigo mediante SMS o e-mail para informarte de la entrega de tu pedido.
+                                <br>
+                                <br>
+                                <b class="titulo-politicas">¿CUÁL ES EL PROCESO DE LA ENTREGA EN TIENDA?</b>
+                                <br>
+                                En caso de haber elegido la entrega en tienda, te comunicaremos la llegada de la mercancía a través de un SMS (tendrás 10 días para recogerla).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" ng-if="barraFooterCtrl.politica == 5">
+                        <div class="col-sm-12">
+                            <div class="titulo-politicas text-center"><b>CAMBIOS</b></div>
+                            <div>
+                                <b class="titulo-politicas">¿PUEDO CAMBIAR MIS ARTÍCULOS?</b>
+                                <br>
+                                <br>
+                                Sí, tienes 2 opciones:
+                                <br>
+                                <br>
+                                1. En nuestras tiendas físicas puedes cambiarlo:
+                                <br>
+                                · POR TALLA O COLOR, sin necesidad de pago adicional y siempre que estén en perfecto estado y dispongamos de stock en tienda.
+                                <br>
+                                · POR OTRO ARTÍCULO DIFERENTE, te reembolsaremos el importe a través de PULLANDBEAR.COM y podrás realizar otra nueva compra en la tienda.
+                                <br>
+                                <br>
+                                2. Desde tu domicilio, si solicitas una devolución y realizas una nueva compra online.
+                                <br>
+                                <br>
+                                <b class="titulo-politicas">¿CUÁL ES EL PLAZO PARA EFECTUAR EL CAMBIO?</b>
+                                <br>
+                                El plazo de cambio es de 30 días desde la fecha de entrega.
+                                <br>
+                                <br>
+                                <b class="titulo-politicas">¿PUEDO CAMBIAR MIS ARTÍCULOS EN CUALQUIER TIENDA JC?</b>
+                                <br>
+                                Sí, siempre y cuando sea del mismo país desde el que se realizó la compra y disponga de la misma sección a la que pertenece la prenda (hombre y/o mujer).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" ng-if="barraFooterCtrl.politica == 6">
+                        <div class="col-sm-12">
+                            <div class="titulo-politicas"><b>POLITICA DE PRIVACIDAD</b></div>
+                            <div>
+                                La presente Política de Privacidad, explica cómo ZOETOP BUSINESS CO., LIMITED (en adelante, "JC," "nosotros," o "nuestro") recopila, usa, comparte y procesa su información, así como las opciones que usted tiene asociadas a esta información. Esta Política de Privacidad, es aplicable a toda la información personal recogida durante cualquier comunicación escrita, electrónica y oral, online o fuera de línea, que incluye: nuestra web JC.COM (“la Web”) a través de nuestra aplicación móvil JC-Fashion Shop (“la App”) además de cualquier otra comunicación escrita, electrónica u oral con JC y sus partes representativas (en adelante “Servicios”).
+                                Por favor, lea atentamente nuestros Términos y Condiciones y esta Política antes de acceder o usar nuestros Servicios. Si no está de acuerdo con esta Política o con los Términos y Condiciones, por favor, no acceda o use nuestros Servicios. Si usted se encuentra fuera de la Unión Económica Europea, al usar nuestros Servicios, acepta los Términos y Condiciones y acepta nuestras prácticas y privacidad descritas en esta Política.
+                                Esta Política puede sufrir cambios en cualquier momento, sin aviso previo, y los cambios pueden afectar a cualquier información personal que ya tengamos sobre usted, así como a cualquier información personal nueva recopilada después de que se modifique la Política. Si hacemos cambios, serán notificados actualizando la fecha este documento más arriba. Le enviaremos un aviso por adelantado si realizamos cambios materiales en la forma en que recopilamos, usamos o divulgamos su Información personal, que afecte sus derechos bajo esta Política. Si se encuentra en una jurisdicción que no se encuentre en el Área Económica Europea, el Reino Unido o Suiza (colectivamente "Países europeos"), su acceso continuo o uso de nuestros Servicios después de recibir la notificación de cambios, constituye su reconocimiento de que acepta la actualización Política.
+                                Además, podemos proporcionarle, a través de divulgaciones en tiempo real o información adicional, las prácticas de manejo de Información personal de partes específicas de nuestros Servicios. Dichos avisos pueden complementar esta Política o brindarle opciones adicionales sobre cómo procesamos su Información personal.
+                                Enlaces Rápidos
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" ng-if="barraFooterCtrl.politica == 7">
+                        <div class="col-sm-12">
+                            <div class="titulo-politicas"><b>POLITICA DE COOCKIES</b></div>
+                            <div style="text-align: justify">
+                                Podemos utilizar cookies, etiquetas y tecnologías similares para recopilar automáticamente información sobre nuestros Servicios. Estas tecnologías de seguimiento permiten a nuestros socios tecnológicos recopilar información, incluida la dirección IP de su ordenador, el identificador de su dispositivo móvil, el tipo de navegador de Internet que está utilizando, el sistema operativo, las URL de referencia, las marcas de fecha / hora, las páginas visitadas y las etiquetas simples de palabras clave. Las cookies o etiquetas son fragmentos de código que permiten a nuestros socios tecnológicos recopilar información, incluida la dirección IP de su ordenador, el identificador de su dispositivo móvil, el tipo de navegador de Internet que está utilizando, el sistema operativo, las URL de referencia, las marcas de fecha / hora, las páginas visitadas y Etiquetas simples de palabras clave. También utilizamos píxeles web para analizar patrones de uso en nuestra Web.
+                                <br>
+                                A.Cookies. Las cookies son pequeños archivos web que un sitio o su proveedor transfieren al disco duro de su dispositivo, a través de su navegador web, que permiten que el sistema de la web o proveedor, reconozca su navegador y recuerde cierta información.
+                                <br>
+                                En general, utilizamos cookies propias y de terceros para los siguientes propósitos: hacer que nuestros Servicios funcionen correctamente; para proporcionar una experiencia de navegación segura durante el uso de nuestros Servicios; para recopilar información pasiva sobre su uso de nuestros Servicios; para medir cómo interactúa con nuestras campañas de marketing; para ayudarnos a mejorar nuestros Servicios; y para recordar sus preferencias para su mejor experiencia.
+                                <br>
+                                Utilizamos los siguientes tipos de cookies en nuestros Servicios:
+                                <br>
+                                Cookies estrictamente necesarias. Estas cookies son esenciales porque le permiten utilizar nuestros Servicios. Por ejemplo, las cookies estrictamente necesarias le permiten acceder a áreas seguras en nuestros Servicios. Sin estas cookies, algunos servicios no se pueden proporcionar. Estas cookies no recopilan información sobre usted con fines de marketing. Esta categoría de cookies es esencial para que nuestros Servicios funcionen y no se pueden desactivar.
+                                <br>
+                                Cookies funcionales. Utilizamos cookies funcionales para recordar sus elecciones, de modo que podamos adaptar nuestros Servicios para proporcionarle funciones mejoradas y contenido personalizado. Por ejemplo, estas cookies se pueden usar para recordar su nombre o preferencias en nuestros Servicios. No utilizamos cookies funcionales para orientarlo con marketing en línea. Si bien estas cookies se pueden deshabilitar, esto puede resultar en una menor funcionalidad durante el uso de nuestros Servicios.
+                                <br>
+                                B.Otras tecnologías de seguimiento. Para ver el grado de éxito en que están funcionando nuestras campañas de marketing u otros objetivos de la Web, a veces usamos píxeles de conversión, que activan una breve línea de código para informarnos cuándo ha pulsado en un botón en particular, o ha alcanzado una página en particular (por ejemplo, una página de agradecimiento una vez ha completado el procedimiento para suscribirse a uno de nuestros servicios, o ha completado uno de nuestros formularios). También utilizamos píxeles web para analizar patrones de uso en nuestra web. El uso de un píxel permite a JC registrar que un dispositivo, navegador o aplicación en particular, ha visitado una página web en concreto.
+                                <br>
+                                C.Sus Opciones. Su navegador puede proporcionarle la opción de rechazar algunas o todas las cookies del navegador. También puede eliminar las cookies de su navegador. Puede ejercer sus preferencias en relación con las cookies que se sirven en nuestras web siguiendo los pasos descritos a continuación.
+                                <br>
+                                Cookies de origen. Puede usar el navegador con el que está viendo esta Web para habilitar, deshabilitar o eliminar las cookies. Para hacer esto, siga las instrucciones proporcionadas por su navegador (generalmente ubicado dentro de la configuración de "Ayuda", "Herramientas" o "Editar"). Tenga en cuenta que si configura su navegador para deshabilitar las cookies, es posible que no pueda acceder a áreas seguras de la Web. Además, si desactiva las cookies, es posible que otras partes de los Servicios no funcionen correctamente. Puede encontrar más información sobre cómo cambiar la configuración de cookies de su navegador en http://www.allaboutcookies.org .
+                                <br>
+                                Publicidad móvil: si no se encuentra en Europa, puede optar por dejar de usar sus identificadores de publicidad móvil para ciertos tipos de publicidad, accediendo a la configuración en el dispositivo móvil y siguiendo las instrucciones. Si opta por no participar, eliminaremos todos los datos sobre usted y no recopilaremos más datos. Se eliminará la identificación aleatoria previamente asignada a usted. Por lo tanto, si en una etapa posterior, decide optar por no participar, no podremos seguir rastreando con la identificación anterior y, a todos los efectos prácticos, será un nuevo usuario. Si se encuentra en Europa, el banner de cookies en nuestro sitio web le brindará la oportunidad de dar su consentimiento, para que sus identificadores de publicidad móvil se utilicen para ciertos tipos de publicidad accediendo a la configuración en el dispositivo móvil.
+                                <br>
+                                Cookies de Terceros. Si no se encuentra en Europa, para darse de baja de redes publicitarias de terceros y entidades similares que usan cookies publicitarias, vaya a http://www.aboutads.info/choices. Una vez que haga clic en el enlace, puede optar por no recibir dicha publicidad de todas las empresas publicitarias participantes, o solo publicidad proporcionada por entidades publicitarias específicas. Para obtener más información sobre redes publicitarias de terceros y entidades similares que utilizan estas tecnologías, visite http://www.aboutads.info/consumers . Si no se encuentra en Europa, el banner de cookies en nuestro sitio web le brindará la oportunidad de dar su consentimiento para tener cookies publicitarias de terceros.
+                                <br>
+                                No controlamos la recopilación o el uso de su información por parte de terceros para ofrecer publicidad basada en intereses. Sin embargo, estos terceros pueden proporcionarle formas de elegir que su información no sea recopilada o utilizada de esta manera. Además, la mayoría de los navegadores web proporcionan páginas de ayuda relacionadas con la configuración de las preferencias de cookies. Puede encontrar más información para los siguientes navegadores aquí:
+                                <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<b>1.- Google Chrome</b>
+                                <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<b>2.- Internet Explorer</b>
+                                <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<b>3.- Mozilla Firefox</b>
+                                <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<b>4.- Safari (Desktop)</b>
+                                <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<b>5.- Safari (Mobile)</b>
+                                <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<b>6.- Android Browser</b>
+                                <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<b>7.- Opera Mobile</b>
+                                <br>
+                                D.Análisis. Si no se encuentra en Europa, podemos utilizar proveedores de servicios externos para monitorear y analizar el uso de nuestra web. Actualmente, utilizamos Google Analytics. Google Analytics es un servicio de análisis web ofrecido por Google LLC ("Google") que rastrea e informa del tráfico de la web. Para obtener más información sobre las prácticas de privacidad de Google, visite la página web de Privacidad y Términos de Google: https://policies.google.com/privacy?hl=en . El complemento del navegador de exclusión voluntaria de Google Analytics, ofrece a los visitantes la capacidad de evitar que Google Analytics recopile y use sus datos, disponible en: https://tools.google.com/dlpage/gaoptout . Si se encuentra en los países europeos y Google Analytics está estructurado para recopilar información personal, el banner de cookies en nuestro sitio web le brindará la oportunidad de dar su consentimiento a Google Analytics.
+                                <br>
+                                Las páginas de nuestra Web y nuestros correos electrónicos, pueden contener pequeños archivos electrónicos conocidos como balizas web (también conocidos como gifs transparentes, etiquetas de píxeles y gifs de un solo píxel) que nos permiten, por ejemplo, contar a los usuarios que han visitado esas páginas o han abierto un correo electrónico y otras estadísticas relacionadas con el sitio web (por ejemplo, registrar la popularidad de cierto contenido del sitio web y verificar la integridad del sistema y del servidor).
+                                <br>
+                                Las páginas de nuestra Web también pueden usar scripts Java, que son fragmentos de código incrustados en varias partes de sitios web y aplicaciones que facilitan una variedad de operaciones, incluida la aceleración de la velocidad de actualización de ciertas funciones o el monitoreo del uso de varios componentes en línea; etiquetas de entidad, que son mecanismos de código HTTP, que permiten que partes de sitios web se almacenen o "almacenen en caché" dentro de su navegador para acelerar el rendimiento del sitio web; y almacenamiento local HTML5, que permite que los datos de los sitios web se almacenen o "guarden en caché" dentro de su navegador para almacenar y recuperar datos en páginas HTML5 cuando se vuelve a visitar el sitio web.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" ng-if="barraFooterCtrl.politica == 8">
+                        <div class="col-sm-12">
+                            <div class="titulo-politicas"><b>Aviso Copyright</b></div>
+                            <div>
+                                JC respeta la propiedad intelectual de los demás. Si cree que su trabajo ha sido copiado de una manera que constituye una infracción a su marca registrada o de derecho de autor, envíe su queja a copyright@shein.com . Responderemos rápidamente a todas las situaciones que muestren un desacuerdo de propiedad intelectual.
+                                <br>
+                                Para hacer una reclamación de derechos de autor o marca registrada, por favor, proporciónenos las siguientes informaciones:
+                                <br>
+                                • Una descripción de los derechos de propiedad intelectual que cree que han sido violados;
+                                <br>
+                                • Una descripción o enlace web del producto que usted alega que hemos infringido;
+                                <br>
+                                • Su dirección, número de teléfono y dirección de correo electrónico;
+                                <br>
+                                • Una declaración suya, hecha bajo pena de perjurio, en la cual certifica que la totalidad de la información de la declaración es exacta y que usted es el propietario de la propiedad intelectual o está autorizado para actuar en nombre del propietario del derecho de autor.
+                                <br>
+                                Nota: Este procedimiento es exclusivo para notificar a JC que sus derechos de autor han sido infringidos.
+                                <br>
+                                <br>
+                                <br>
+                                <b class="titulo-politicas">Derechos de autor</b>
+                                <br>
+                                <br>
+                                Todo el contenido incluido o disponible en el sitio web de JC, Aplicación mobil o Servicios como texto, gráficos, logotipos, iconos de botones, imágenes, clips de audio, descargas digitales, compilaciones de datos y software son propiedad de JC y están protegidos por las leyes internacionales de los derechos de autor.
+                                <br>
+                                <br>
+                                <br>
+                               <b class="titulo-politicas"> Anuncio de marcas</b>
+                                <br>
+                                <br>
+                                JC también es propietaria de la marca "JC" registrada en muchos países. La marca comercial y ropa de JC no pueden ser utilizadas en combinación con otro producto o servicio que no sea JC, de manera a que pueda causar confusión entre los clientes, pero igualmente que denigre o desacredite JC.
+                                <br>
+                                <br>
+                                <br>
+                                <b class="titulo-politicas">Renuncia de responsabilidad</b>
+                                <br>
+                                <br>
+                                <b>ESTE SERVICIO PUEDE CONTENER TRADUCCIONES CON TECNOLOGÍA DE GOOGLE. GOOGLE REHÚSA TODA GARANTÍA RELACIONADA CON LAS TRADUCCIONES, TANTO EXPLÍCITA O EXPLÍCITA, INCLUIDAS LAS GARANTÍAS DE EXACTITUD, FIABILIDAD Y CUALQUIER GARANTÍA IMPLÍCITA DE COMERCIABILIDAD, ADECUACIÓN A UN FIN DETERMINADO Y NO INFRACCIÓN.</b>
+                                <br>
+                                El sitio web de JC se ha traducido para tu comodidad con software de traducción con tecnología del Traductor de Google. Se han realizado esfuerzos razonables a fin de proporcionar una traducción precisa, pero las traducciones automáticas no son perfectas ni están pensadas para reemplazar a los traductores humanos. Las traducciones se proporcionan como servicio a los usuarios del sitio web de JC y se proporcionan "tal cual". No se ofrece ninguna garantía, ya sea explícita o implícita, en cuanto a la precisión, la fiabilidad o el grado de corrección de las traducciones realizadas desde el <idioma de origen> a cualquier otro idioma. Es posible que algunos contenidos (como imágenes, vídeos, Flash, etc.) no estén correctamente traducidos debido a las limitaciones del software de traducción.
+                                <br>
+                                El texto oficial es la versión en es del sitio web. Las discrepancias o diferencias creadas en la traducción no son vinculantes y no tienen efectos legales de cara al cumplimiento o la aplicación. Si te surgen preguntas sobre la precisión de la información incluida en el sitio web traducido, consulta la versión en es del sitio web, que es la oficial.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer" ng-if="form.$valid">
+                        <div class="col-sm-3 pull-right" style="margin-bottom: 20px">
+                            <div style="font-size: 15px;">
+                                <button class="buttonAceptar" data-dismiss="modal" aria-hidden="true">
+                                    <span>{{"CERRAR"}}</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,74 @@
+<div class="modal fade" id="categoriaA" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" style="width: 60%">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">
+                    <i class="ixs ixs-eliminar"></i> Agregar Categoria
+                </h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-inline" role="form" name="form" novalidate>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label>Nombre de Categoria</label>
+                            <div ng-class="{'has-error': form.nombre.$invalid,
+                                            'has-success': form.nombre.$valid}">
+                                <input type="text" name="nombre"
+                                       ng-model="categoriaCtrl.nuevaCategoria.nombreCategoria"
+                                       ng-pattern="/^[A-Za-záéíóúÁÉÍÓÚñÑ0-9- ]*$/"
+                                       class="form-control" style="width: 100%"
+                                       maxlength="100" required/>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <label>¿Vigente?</label>
+                            <div>
+                                <input type="checkbox" id="editable"
+                                       ng-model="categoriaCtrl.nuevaCategoria.indVigente"
+                                       ng-true-value="'S'" ng-false-value="'N'">
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <ecommers-file file="categoriaCtrl.archivoCategoria"
+                                           limpiar="perPersonaCtrl.limpiarArchivoPromocion"
+                                           requerido="true"
+                                           validacion-form="form"
+                                           acepta="image/jpeg,image/gif,image/png,image/x-eps">
+                            </ecommers-file>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <label>Descripcion de Categoria</label>
+                            <div ng-class="{'has-error': form.descripcion.$invalid, 'has-success': form.descripcion.$valid}">
+                                <input type="text" name="descripcion"  style="width: 100%"
+                                       ng-model="categoriaCtrl.nuevaCategoria.descripcion"
+                                       ng-pattern="/^[A-Za-záéíóúÁÉÍÓÚñÑ0-9- ]*$/"
+                                       class="form-control" maxlength="500" required/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer" ng-if="form.$valid">
+                        <div style="display: inline-block; margin-left: 15px;">
+                            <div style="display: inline-block;">
+                                <label>Confirmar</label>
+                            </div>
+                            <div style="display: inline-block; margin-left: 5px;">
+                                <button type="button"
+                                        ng-click="categoriaCtrl.agregarCategoria()"
+                                        data-dismiss="modal"
+                                        class="btn btn-success">
+                                    <i class="ixs ixs-palomita">
+                                    </i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,106 @@
+<div class="modal fade" id="productoA" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" style="width: 60%">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">
+                    <i class="ixs ixs-eliminar"></i> Agregar Producto
+                </h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-inline" role="form" name="form" novalidate>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label>Nombre de Producto</label>
+                            <div ng-class="{'has-error': form.nombre.$invalid,
+                                            'has-success': form.nombre.$valid}">
+                                <input type="text" name="nombre"
+                                       ng-model="categoriaCtrl.nuevaProducto.nombreProducto"
+                                       ng-pattern="/^[A-Za-záéíóúÁÉÍÓÚñÑ0-9- ]*$/"
+                                       class="form-control" style="width: 100%"
+                                       maxlength="100" required/>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <label>¿Vigente?</label>
+                            <div>
+                                <input type="checkbox" id="editable"
+                                       ng-model="categoriaCtrl.nuevaProducto.indVigente"
+                                       ng-true-value="'S'" ng-false-value="'N'">
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <ecommers-file file="categoriaCtrl.archivoProducto"
+                                           limpiar="perPersonaCtrl.limpiarArchivoProducto"
+                                           requerido="true"
+                                           validacion-form="form"
+                                           acepta="image/jpeg,image/gif,image/png,image/x-eps">
+                            </ecommers-file>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <label>Orden</label>
+                            <div ng-class="{'has-error': form.orden.$invalid,
+                                            'has-success': form.orden.$valid}">
+                                <input type="text" name="orden"
+                                       ng-model="categoriaCtrl.nuevaProducto.orden"
+                                       class="form-control" style="width: 100%"
+                                       maxlength="5" required/>
+                            </div>
+                        </div>
+                        <div class="col-sm-5">
+                            <label>No Existencias</label>
+                            <div ng-class="{'has-error': form.noExistencias.$invalid,
+                                            'has-success': form.noExistencias.$valid}">
+                                <input type="text" name="noExistencias"
+                                       ng-model="categoriaCtrl.nuevaProducto.noExistencias"
+                                       class="form-control" style="width: 100%"
+                                       maxlength="10" required/>
+                            </div>
+                        </div>
+                        <div class="col-sm-5">
+                            <label>Precio</label>s
+                            <div ng-class="{'has-error': form.precio.$invalid,
+                                            'has-success': form.precio.$valid}">
+                                <input type="text" name="precio"
+                                       ng-model="categoriaCtrl.nuevaProducto.precio"
+                                       class="form-control" style="width: 100%"
+                                       maxlength="100" required/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <label>Descripcion</label>
+                            <div ng-class="{'has-error': form.descripcion.$invalid, 'has-success': form.descripcion.$valid}">
+                                <input type="text" name="descripcion"  style="width: 100%"
+                                       ng-model="categoriaCtrl.nuevaProducto.descripcionProducto"
+                                       ng-pattern="/^[A-Za-záéíóúÁÉÍÓÚñÑ0-9- ]*$/"
+                                       class="form-control" maxlength="500" required/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer" ng-if="form.$valid">
+                        <div style="display: inline-block; margin-left: 15px;">
+                            <div style="display: inline-block;">
+                                <label>Confirmar</label>
+                            </div>
+                            <div style="display: inline-block; margin-left: 5px;">
+                                <button type="button"
+                                        ng-click="categoriaCtrl.agregarProducto()"
+                                        data-dismiss="modal"
+                                        class="btn btn-success">
+                                    <i class="ixs ixs-palomita">
+                                    </i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
