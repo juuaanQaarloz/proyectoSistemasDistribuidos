@@ -1,0 +1,45 @@
+<div class="modal fade" id="mdlAutorA" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content alert-block modal-negra">
+            <div class="modal-header" style="text-align: center">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel"> Agregar Autor</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-inline" name="form" role="form" novalidate>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div><label><b>{{'Nombre'}}</b></label></div>
+                            <div>
+                                <input type="text" minlength="3" name="nombre"
+                                       ng-model="asignacionSitioOficinaCtrl.nuevoAutor.nombre"
+                                       class="form-control" maxlength="50" required
+                                       ng-pattern="/^[A-Za-záéíóúÁÉÍÓÚñÑ0 ]*$/" style="width: 100%;"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div><label><b>{{'Nacionalidad'}}</b></label></div>
+                            <div>
+                                <input type="text" minlength="3" name="nacionalidad"
+                                       ng-model="asignacionSitioOficinaCtrl.nuevoAutor.nacionalidad"
+                                       class="form-control" maxlength="50" required
+                                       ng-pattern="/^[A-Za-záéíóúÁÉÍÓÚñÑ ]*$/" style="width: 100%;"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="col-sm-4 col-sm-offset-8" ng-if="form.$valid"
+                             style="margin-bottom: 5px; padding-right: 0 ">
+                            <div style="height: 35px; font-size: 15px;">
+                                <button class="buttonAceptar"
+                                        ng-click="autorCtrl.insertarAutor()">
+                                    <span>{{"Confirmar"}}</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
