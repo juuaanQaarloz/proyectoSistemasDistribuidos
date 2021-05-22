@@ -1,0 +1,16 @@
+<div class="row" style="padding: 1%" ng-controller="CinemaController as cinemaCtrl">
+
+    <div class="col-sm-12" ng-if="cinemaCtrl.listDatosCinemasTbl" >
+        <xs-tabla icono="pantalla" titulo="Cinemas"
+                  config="cinemaCtrl.tblCinema"
+                  datos="cinemaCtrl.listDatosCinemas"
+                  registro-seleccionado="cinemaCtrl.cinemaSeleccionado"
+                  seleccionar-registro="cinemaCtrl.seleccionarCinema(registro)">
+        </xs-tabla>
+    </div>
+
+    <div ng-include="cinemaCtrl.mdlCinemaA"></div>
+    <div ng-include="cinemaCtrl.mdlCinemaB"></div>
+    <div ng-include="cinemaCtrl.mdlCinemaM"></div>
+
+</div>

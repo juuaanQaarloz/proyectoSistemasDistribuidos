@@ -280,12 +280,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #33458B;
+  color: #000000;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #33458B;
+  color: #000000;
   text-decoration: underline;
 }
 a:focus {
@@ -4623,6 +4623,7 @@ a.thumbnail.active {
   background-color: #f2dede;
   border-color: #eed3d7;
   color: #d9514e;
+  border-radius: 10px !important;
 }
 #note {
   position: absolute;
@@ -5381,6 +5382,7 @@ button.close {
   border-bottom: 1px solid #e5e5e5;
   min-height: 16.428571429px;
   background-color: #000000;
+  border-radius: 10px 10px 0 0;
 }
 .modal-header .close {
   margin-top: -2px;
@@ -6602,4 +6604,21 @@ ol.progtrckr li.progtrckr-todo:before {
   width: calc(100% - 20px);
   height: calc(100% - 20px);
   background-color: #fff;
+}
+
+.modal-negra {
+  background-color: #fff;
+  border-color: #fff;
+  color: #000000;
+}
+
+
+.button-eliminar {
+  padding: 5px;
+  background: #d9514e;
+  width: 100%;
+  border-radius: 15px;
+  color: white;
+  border: none;
+  outline: none;
 }

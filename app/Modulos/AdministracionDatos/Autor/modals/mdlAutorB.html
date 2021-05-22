@@ -1,0 +1,27 @@
+<div class="modal fade" id="mdlAutorB" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width: 40%">
+        <div class="modal-content alert-block alert-danger">
+            <div class="modal-header delete" style="text-align: center">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel"> Eliminar Autor </h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-inline" role="form" novalidate>
+                    <div class="form-group">
+                        <p>¿Estas seguro que deseas eliminar al autor <b>{{autorCtrl.autorSeleccionado.nombre}}</b>, recuerda que este es un proceso irreversible?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="col-sm-4 col-sm-offset-8" style="margin-bottom: 5px; padding-right: 0 ">
+                            <div style="height: 35px; font-size: 15px;">
+                                <button class="button-eliminar"
+                                        ng-click="autorCtrl.eliminarAutor()">
+                                    <span>{{"Eliminar"}}</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

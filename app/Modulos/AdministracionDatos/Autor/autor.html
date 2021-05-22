@@ -1,0 +1,16 @@
+<div class="row" style="padding: 1%" ng-controller="AutorController as autorCtrl">
+
+    <div class="col-sm-12" ng-if="autorCtrl.listDatosAutoresTbl" >
+        <xs-tabla icono="usuario" titulo="Autores"
+                  config="autorCtrl.tblAutor"
+                  datos="autorCtrl.listDatosAutores"
+                  registro-seleccionado="autorCtrl.autorSeleccionado"
+                  seleccionar-registro="autorCtrl.seleccionarAutor(registro)">
+        </xs-tabla>
+    </div>
+
+    <div ng-include="autorCtrl.mdlAutorA"></div>
+    <div ng-include="autorCtrl.mdlAutorB"></div>
+    <div ng-include="autorCtrl.mdlAutorM"></div>
+
+</div>

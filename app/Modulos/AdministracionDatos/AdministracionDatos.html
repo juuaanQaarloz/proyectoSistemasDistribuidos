@@ -6,17 +6,44 @@
             <ul class="nav nav-tabs">
                 <li ng-class="{active: administracionDatosCtrl.tabSeleccionada == 1}">
                     <a href="" ng-click="administracionDatosCtrl.tabSeleccionada = 1">
-                        Usuarios
+                        &nbsp;&nbsp;<i class="ixs ixs-usuario"></i>&nbsp;&nbsp;
+                        Autor&nbsp;&nbsp;
                     </a>
                 </li>
                 <li ng-class="{active: administracionDatosCtrl.tabSeleccionada == 2}">
                     <a href="" ng-click="administracionDatosCtrl.tabSeleccionada = 2">
-                        Categorias
+                        &nbsp;&nbsp;<i class="ixs ixs-pantalla"></i>&nbsp;&nbsp;
+                        Cinema&nbsp;&nbsp;
                     </a>
                 </li>
                 <li ng-class="{active: administracionDatosCtrl.tabSeleccionada == 3}">
                     <a href="" ng-click="administracionDatosCtrl.tabSeleccionada = 3">
-                        Promociones
+                        &nbsp;&nbsp;<i class="ixs ixs-lenguaje"></i>&nbsp;&nbsp;
+                        Ciudad&nbsp;&nbsp;
+                    </a>
+                </li>
+                <li ng-class="{active: administracionDatosCtrl.tabSeleccionada == 4}">
+                    <a href="" ng-click="administracionDatosCtrl.tabSeleccionada = 4">
+                        &nbsp;&nbsp;<i class="ixs ixs-perfilejecutivo"></i>&nbsp;&nbsp;
+                        Director
+                    </a>
+                </li>
+                <li ng-class="{active: administracionDatosCtrl.tabSeleccionada == 5}">
+                    <a href="" ng-click="administracionDatosCtrl.tabSeleccionada = 5">
+                        &nbsp;&nbsp;<i class="ixs ixs-empresa"></i>&nbsp;&nbsp;
+                        Estudio&nbsp;&nbsp;
+                    </a>
+                </li>
+                <li ng-class="{active: administracionDatosCtrl.tabSeleccionada == 6}">
+                    <a href="" ng-click="administracionDatosCtrl.tabSeleccionada = 6">
+                        &nbsp;&nbsp;<i class="ixs ixs-videocamaraoff"></i>&nbsp;&nbsp;
+                        Pelicula&nbsp;&nbsp;
+                    </a>
+                </li>
+                <li ng-class="{active: administracionDatosCtrl.tabSeleccionada == 7}">
+                    <a href="" ng-click="administracionDatosCtrl.tabSeleccionada = 7">
+                        &nbsp;&nbsp;<i class="ixs ixs-pantalla"></i>&nbsp;&nbsp;
+                        Proyeccion&nbsp;&nbsp;
                     </a>
                 </li>
             </ul>
@@ -26,17 +53,11 @@
 
         <div class="tab-content" ng-if="administracionDatosCtrl.tabSeleccionada == 1"
              style="margin-top: 15px">
-            <div ng-include="'Modulos/AdministracionDatos/Usuario/usuario.html'"></div>
+            <div ng-include="'Modulos/AdministracionDatos/Autor/autor.html'"></div>
         </div>
-
         <div class="tab-content" ng-if="administracionDatosCtrl.tabSeleccionada == 2"
              style="margin-top: 15px">
-            <div ng-include="'Modulos/AdministracionDatos/Categoria/Categoria.html'"></div>
-        </div>
-
-        <div class="tab-content" ng-if="administracionDatosCtrl.tabSeleccionada == 3"
-             style="margin-top: 15px">
-            <div ng-include="'Modulos/AdministracionDatos/Promocion/Promocion.html'"></div>
+            <div ng-include="'Modulos/AdministracionDatos/Cinema/cinema.html'"></div>
         </div>
     </div>
 

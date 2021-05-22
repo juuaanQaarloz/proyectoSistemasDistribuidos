@@ -18,18 +18,6 @@
             controllerAs: 'administracionDatosCtrl'
         });
 
-        $routeProvider.when('/producto', {
-            templateUrl: 'Modulos/Ventas/Productos/Productos.html',
-            controller: 'Productos',
-            controllerAs: 'productoCtrl'
-        });
-
-        $routeProvider.when('/venta', {
-            templateUrl: 'Modulos/Ventas/Venta/Venta.html',
-            controller: 'Venta',
-            controllerAs: 'ventaCtrl'
-        });
-
         $routeProvider.otherwise({redirectTo: '/inicio'});
 
     };

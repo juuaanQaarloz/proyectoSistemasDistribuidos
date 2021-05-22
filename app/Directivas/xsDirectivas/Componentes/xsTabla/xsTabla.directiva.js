@@ -26,7 +26,7 @@
         tablaCtrl.datosFiltrados = [];
         tablaCtrl.menusRegistroSeleccionado = [];
         tablaCtrl.currentPage = 0;
-        tablaCtrl.itemsPerPage = $scope.config.paginacion[0];
+        tablaCtrl.itemsPerPage = ($scope.config&&$scope.config.paginacion?$scope.config.paginacion[0]:[10, 20, 30]);
         tablaCtrl.flagVigencia = false;
         tablaCtrl.valorAgregarRow = $scope.agregarRowValor;
         tablaCtrl.confColor = {};
