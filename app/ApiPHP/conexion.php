@@ -1,8 +1,8 @@
 <?php 
 
-    $servidor = 'localhost';
-    $usuario  = 'root';
-    $password = '';
+    $servidor = '192.168.100.104';
+    $usuario  = 'juuaanqaarloz';
+    $password = '123456789';
     $db       = 'videoteca';
 
     $con = mysqli_connect($servidor, $usuario, $password, $db, 3306) or die('error conexion');

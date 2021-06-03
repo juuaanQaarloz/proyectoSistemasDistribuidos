@@ -31,5 +31,16 @@
                 {valor: 'direccion', tipo: 'string', descripcion: 'Dirección'},
             ]
         })
+        .value('tblCiudad', {
+            id: 'idTablaCiudad',
+            paginacion: [10, 30, 50, 100],
+            permisos: {agregar: true, borrar: true, modificar: true, consultar: true},
+            modals: {agregar: 'mdlCiudadA', borrar: 'mdlCiudadB', modificar: 'mdlCiudadM'},
+            columnas: [
+                {valor: 'id', tipo: 'string', descripcion: 'No.'},
+                {valor: 'nombre', tipo: 'string', descripcion: 'Nombre'},
+                {valor: 'continente', tipo: 'string', descripcion: 'Continente'},
+            ]
+        })
     ;
 })();

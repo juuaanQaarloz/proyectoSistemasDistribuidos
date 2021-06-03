@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<div class="row" style="padding: 1%" ng-controller="CiudadController as ciudadCtrl">
 
-</body>
-</html>
+    <div class="col-sm-12" ng-if="ciudadCtrl.listDatosCiudadsTbl" >
+        <xs-tabla icono="lenguaje" titulo="Ciudades"
+                  config="ciudadCtrl.tblCiudad"
+                  datos="ciudadCtrl.listDatosCiudads"
+                  registro-seleccionado="ciudadCtrl.ciudadSeleccionado"
+                  seleccionar-registro="ciudadCtrl.seleccionarCiudad(registro)">
+        </xs-tabla>
+    </div>
+
+    <div ng-include="ciudadCtrl.mdlCiudadA"></div>
+    <div ng-include="ciudadCtrl.mdlCiudadB"></div>
+    <div ng-include="ciudadCtrl.mdlCiudadM"></div>
+
+</div>

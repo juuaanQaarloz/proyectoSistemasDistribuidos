@@ -1,10 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<div class="modal fade" id="mdlCiudadA" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content alert-block modal-negra">
+            <div class="modal-header" style="text-align: center">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel"> Agregar Ciudad </h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-inline" name="form" role="form" novalidate>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div><label><b>{{'Nombre'}}</b></label></div>
+                            <div>
+                                <input type="text" minlength="3" name="nombre"
+                                       ng-model="cinemaCtrl.nuevoCinema.nombre"
+                                       class="form-control" maxlength="20" required
+                                       ng-pattern="/^[A-Za-záéíóúÁÉÍÓÚñÑ0 ]*$/" style="width: 100%;"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div><label><b>{{'Continente'}}</b></label></div>
+                            <div>
+                                <input type="text" minlength="3" name="continente"
+                                       ng-model="cinemaCtrl.nuevoCinema.continente"
+                                       class="form-control" maxlength="50" required
+                                       ng-pattern="/^[A-Za-záéíóúÁÉÍÓÚñÑ0-9 ]*$/" style="width: 100%;"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="col-sm-4 col-sm-offset-8"
+                             ng-if="form.$valid" style="margin-bottom: 5px; padding-right: 0 ">
+                            <div style="height: 35px; font-size: 15px;">
+                                <button class="buttonAceptar"
+                                        ng-click="cinemaCtrl.insertarCinema()">
+                                    <span>{{"Confirmar"}}</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
