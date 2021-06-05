@@ -42,5 +42,17 @@
                 {valor: 'continente', tipo: 'string', descripcion: 'Continente'},
             ]
         })
+
+        .value('tblProyecciones', {
+            id: 'idTablaProyecciones',
+            paginacion: [10, 30, 50, 100],
+            permisos: {agregar: true, borrar: true, modificar: true, consultar: true},
+            modals: {agregar: 'mdlProyeccionA', borrar: 'mdlProyeccionB', modificar: 'mdlProyeccionM'},
+            columnas: [
+                {valor: 'id', tipo: 'string', descripcion: 'No.'},
+                {valor: 'nombre', tipo: 'string', descripcion: 'Nombre'},
+                {valor: 'direccion', tipo: 'string', descripcion: 'Dirección'},
+            ]
+        })
     ;
 })();

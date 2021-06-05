@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<div class="row" style="padding: 1%" ng-controller="ProyeccionesController as proyeccionCtrl">
 
-</body>
-</html>
+    <div class="col-sm-12" ng-if="proyeccionCtrl.listDatosProyeccionesTbl" >
+        <xs-tabla icono="pantalla" titulo="Proyecciones"
+                  config="proyeccionCtrl.tblProyecciones"
+                  datos="proyeccionCtrl.listDatosProyecciones"
+                  registro-seleccionado="proyeccionCtrl.proyeccionSeleccionado"
+                  seleccionar-registro="proyeccionCtrl.seleccionarProyecciones(registro)">
+        </xs-tabla>
+    </div>
+
+    <div ng-include="proyeccionCtrl.mdlProyeccionesA"></div>
+    <div ng-include="proyeccionCtrl.mdlProyeccionesB"></div>
+    <div ng-include="proyeccionCtrl.mdlProyeccionesM"></div>
+
+</div>
